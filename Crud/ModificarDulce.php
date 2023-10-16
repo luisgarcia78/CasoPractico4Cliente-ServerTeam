@@ -10,8 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Llamar a la función ActualizarDulce
     $dulces=new SoapClient(
       null, array(
-        'location' => 'https://wsdulcestipicosmexicanos.000webhostapp.com//DulceService.php',
-        'uri' => 'https://wsdulcestipicosmexicanos.000webhostapp.com//DulceService.php',
+        'location' => 'https://wsdulcestipicosmexicanos.000webhostapp.com/DulceService.php',
+        'uri' => 'https://wsdulcestipicosmexicanos.000webhostapp.com/DulceService.php',
         'trace' => 1
     )
     );
