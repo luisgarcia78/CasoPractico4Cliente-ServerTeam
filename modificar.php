@@ -54,7 +54,7 @@ if (isset($_GET['id'])) {
                 </div>
                 <div class="form-group">
                     <label for="precio">Precio:</label>
-                    <input type="text" name="precio" value="<?php echo $item['Precio']; ?>" class="form-control">
+                    <input type="number" name="precio" value="<?php echo $item['Precio']; ?>" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="origen">Origen:</label>
@@ -62,7 +62,7 @@ if (isset($_GET['id'])) {
                 </div>
                 <div class="form-group">
                     <label for="stock">Stock:</label>
-                    <input type="text" name="stock" value="<?php echo $item['Stock']; ?>" class="form-control">
+                    <input type="number" name="stock" value="<?php echo $item['Stock']; ?>" class="form-control">
                 </div>
                 <input type="submit" value="Actualizar" class="btn btn-primary">
                 <a href="index.php" type="button" class="btn btn-outline-danger">Cancelar</a>
