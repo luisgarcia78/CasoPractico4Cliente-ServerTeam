@@ -33,6 +33,7 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Dulce</title>
+    <link rel="shortcut icon" href="img/banner.jpg" type="image/x-icon">
     <link rel="stylesheet" href="Css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -54,7 +55,7 @@ if (isset($_GET['id'])) {
                 </div>
                 <div class="form-group">
                     <label for="precio">Precio:</label>
-                    <input type="text" name="precio" value="<?php echo $item['Precio']; ?>" class="form-control">
+                    <input type="number" name="precio" value="<?php echo $item['Precio']; ?>" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="origen">Origen:</label>
@@ -62,7 +63,7 @@ if (isset($_GET['id'])) {
                 </div>
                 <div class="form-group">
                     <label for="stock">Stock:</label>
-                    <input type="text" name="stock" value="<?php echo $item['Stock']; ?>" class="form-control">
+                    <input type="number" name="stock" value="<?php echo $item['Stock']; ?>" class="form-control">
                 </div>
                 <input type="submit" value="Actualizar" class="btn btn-primary">
                 <a href="index.php" type="button" class="btn btn-outline-danger">Cancelar</a>

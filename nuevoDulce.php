@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar nuevo dulce</title>
+    <link rel="shortcut icon" href="img/banner.jpg" type="image/x-icon">
     <link rel="stylesheet" href="Css/style.css">
     <!-- Agregar enlaces a Bootstrap CSS y JavaScript -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -25,7 +26,7 @@
                     </div>
                     <div class="form-group">
                         <label for="Precio">Precio</label>
-                        <input type="number" id="precio" name="Precio" step="any" required>
+                        <input type="number" id="precio" name="Precio" step="any" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="Origen">Origen</label>

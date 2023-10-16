@@ -15,7 +15,8 @@ $dulces = new SoapClient(
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Confirmación de eliminación</title>
+  <title>Confirmar elimiación</title>
+  <link rel="shortcut icon" href="/CasoPractico4/img/banner.jpg" type="image/x-icon">
   <link rel="stylesheet" href="Css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
