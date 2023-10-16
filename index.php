@@ -17,12 +17,12 @@
     </div>
     <div class="container">
 
-       <form id="form-busqueda" class="form-inline" style="width: 100%;" method="post" action="Crud/BuscarDulce.php">
+    <form id="form-busqueda" class="form-inline" style="width: 100%;" method="post" action="Crud/BuscarDulce.php">
     <div class="form-group">
         <input type="text" name="nombre" class="form-control" placeholder="Origen de dulce">
     </div>
     <button type="submit" class="btn btn-primary" style="margin-left: 1%;">Buscar</button>
-</form>
+    </form>
 
         <a href="nuevoDulce.php" class="btn btn-primary" style="float: right;">Agregar</a>
         <br>
