@@ -12,15 +12,22 @@
 </head>
 <body>
     <div class="divban" style="width: 100%; text-align: center;">
-        <h1>Dulces típicos Mexicanos</h1>
+        <h1 style=" background: linear-gradient(45deg, green, white, red);">Dulces típicos Mexicanos</h1>
         <img src="img/images.jpeg" alt="Banner">
     </div>
-
     <div class="container">
+
+       <form id="form-busqueda" class="form-inline" style="width: 100%;" method="post" action="Crud/BuscarDulce.php">
+    <div class="form-group">
+        <input type="text" name="nombre" class="form-control" placeholder="Origen de dulce">
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-left: 1%;">Buscar</button>
+</form>
+
         <a href="nuevoDulce.php" class="btn btn-primary" style="float: right;">Agregar</a>
         <br>
 
-        <div class="table-responsive" style="max-height: 400px; overflow-y: scroll;">
+        <div class="table-responsive" style="max-height: 400px; overflow-y: scroll;"><br>
             <table class="table">
                 <thead>
                     <tr>
@@ -39,8 +46,8 @@
                     <?php 
                     $dulces = new SoapClient(
                         null, array(
-                            'location' => 'http://localhost:8080/servidorCasoPRac4/DulceService.php',
-                            'uri' => 'http://localhost:8080/servidorCasoPRac4/DulceService.php',
+                            'location' => 'https://wsdulcestipicosmexicanos.000webhostapp.com//DulceService.php',
+                            'uri' => 'https://wsdulcestipicosmexicanos.000webhostapp.com//DulceService.php',
                             'trace' => 1
                         )
                     );
@@ -71,6 +78,19 @@
             </table>
         </div>
     </div>
+    <footer class="footer bg-dark text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; <?php echo date("Y"); ?> Dulces Típicos Mexicanos</p>
+            </div>
+            <div class="col-md-6 text-right">
+                <p>Equipo No:</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </body>
 <script>
   // Función para mostrar una confirmación antes de eliminar

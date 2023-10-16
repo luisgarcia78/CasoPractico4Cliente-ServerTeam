@@ -17,23 +17,23 @@
                 <h1 style="text-align: center;">Agregar </h1>
                     <div class="form-group">
                         <label for="Nombre">Nombre</label>
-                        <input type="text" class="form-control" name="Nombre">
+                        <input type="text" class="form-control" name="Nombre" required>
                     </div>
                     <div class="form-group">
                         <label for="Descripcion">Descripcion</label>
-                        <textarea name="Descripcion" class="form-control"></textarea>
+                        <textarea name="Descripcion" class="form-control" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="Precio">Precio</label>
-                        <input type="text" class="form-control" name="Precio">
+                        <input type="number" id="precio" name="Precio" step="any" required>
                     </div>
                     <div class="form-group">
                         <label for="Origen">Origen</label>
-                        <input type="text" class="form-control" name="Origen">
+                        <input type="text" class="form-control" name="Origen" required>
                     </div>
                     <div class="form-group">
                         <label for="Stock">Stock</label>
-                        <input type="text" class="form-control" name="Stock">
+                        <input type="number" class="form-control" name="Stock" required>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Guardar</button>
@@ -43,35 +43,6 @@
         </div>
     </div>
     
-    <?php 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $nombre = $_POST['Nombre'];
-        $descripcion = $_POST['Descripcion'];
-        $precio = $_POST['Precio'];
-        $origen = $_POST['Origen'];
-        $stock = $_POST['Stock'];
-
-        $dulces = new SoapClient(
-            null, array(
-                'location' => 'http://localhost:8080/servidorCasoPRac4/DulceService.php',
-                'uri' => 'http://localhost:8080/servidorCasoPRac4/DulceService.php',
-                'trace' => 1
-            )
-        );
-
-        try {
-            $respuest = $dulces->__soapCall("InsertarDulce", [$nombre, $descripcion, $precio, $origen, $stock]);
-
-            if ($respuest == 1) {
-                echo 'Se insertó correctamente ' . $nombre;
-                echo '<a href="/CasoPractico4/index.php">Regresar</a>';
-            } else {
-                echo 'Error al insertar';
-            }
-        } catch (SoapFault $e) {
-            echo $e->getMessage();
-        }
-    }
-    ?>
+   
 </body>
 </html>

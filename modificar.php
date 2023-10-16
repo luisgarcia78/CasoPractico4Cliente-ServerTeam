@@ -4,8 +4,8 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $dulces = new SoapClient(
         null, array(
-            'location' => 'http://localhost:8080/servidorCasoPRac4/DulceService.php',
-            'uri' => 'http://localhost:8080/servidorCasoPRac4/DulceService.php',
+            'location' => 'https://wsdulcestipicosmexicanos.000webhostapp.com//DulceService.php',
+            'uri' => 'https://wsdulcestipicosmexicanos.000webhostapp.com//DulceService.php',
             'trace' => 1
         )
     );
